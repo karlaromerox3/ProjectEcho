@@ -37,7 +37,8 @@ class StudentController extends Controller
             ]
             );
         $student = Student::create($data);
-        return redirect('/');
+
+        return redirect()->route('belonging.index');
     }
 
     /**
