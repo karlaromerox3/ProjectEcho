@@ -68,7 +68,7 @@
 <body class="bg-dark text-light">
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Proyecto Throwback</a>
+            <a class="navbar-brand" href="{{ route('homepage') }}">Proyecto Throwback</a>
             <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -81,10 +81,10 @@
                             Generales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Auto-eficacia</a>
+                        <a class="nav-link" href="{{ route('belonging.index') }}">Pertenencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pertenencia</a>
+                        <a class="nav-link" href="{{ route('efficacy.index') }}">Auto-eficacia</a>
                     </li>
 
                 </ul>
