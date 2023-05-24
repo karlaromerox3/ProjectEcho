@@ -6,6 +6,7 @@ use App\Models\Answer;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class BelongingController extends Controller
 {
@@ -41,8 +42,11 @@ class BelongingController extends Controller
             $respuesta->question_id = $question_id;
             $respuesta->score = $score;
             $respuesta->save();
+            Session::put('belongingFilled', true);
 
             $respuesta->students()->attach($studentId);
+            return redirect()->route('belonging.index')->with('studentId', $studentId);;
+
         }
     }
 

@@ -9,6 +9,17 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <style type="text/css">
+        .disabled-link {
+            pointer-events: none;
+            /* Desactiva eventos de puntero */
+            color: gray;
+            /* Cambia el color para indicar que está desactivado */
+            text-decoration: none;
+            /* Elimina la subrayado del enlace */
+            cursor: default;
+            /* Cambia el cursor para indicar que no es interactivo */
+        }
+
         @media (min-width: 992px) {
             .max-width-answer {
                 max-width: 220px !important;
@@ -77,14 +88,18 @@
             <div style="flex-grow: 0!important;" class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('student.create') }}">Datos
-                            Generales</a>
+                        <a class="nav-link {{ session('generalDataFilled') ? 'disabled-link' : '' }}"
+                            aria-current="page" href="{{ route('student.create') }}">
+                            Datos Generales
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('belonging.index') }}">Pertenencia</a>
+                        <a class="nav-link {{ session('belongingFilled') ? 'disabled-link' : '' }}"
+                            href="{{ route('belonging.index') }}">Pertenencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('efficacy.index') }}">Auto-eficacia</a>
+                        <a class="nav-link {{ session('efficacyFilled') ? 'disabled-link' : '' }}"
+                            href="{{ route('efficacy.index') }}">Auto-eficacia</a>
                     </li>
 
                 </ul>

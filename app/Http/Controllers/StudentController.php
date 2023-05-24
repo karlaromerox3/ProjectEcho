@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StudentController extends Controller
 {
@@ -37,6 +38,7 @@ class StudentController extends Controller
             ]
             );
         $student = Student::create($data);
+        Session::put('generalDataFilled', true);
 
         return redirect()->route('belonging.index')->with('studentId', $student->id);;
     }

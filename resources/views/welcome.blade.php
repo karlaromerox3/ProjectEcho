@@ -18,10 +18,12 @@
             <p class="fs-5 text-light lh-3 d-lg-none">Evaluarás 3 secciones de manera anónima mientras reflexionas sobre
                 tu
                 experiencia estudiantil a lo largo de tu carrera.</p>
-            <a href="{{ route('student.create') }}" class="d-none d-md-block btn btn-light position-relative">Comenzar</a>
+            <a href="{{ route('student.create') }}"
+                class="d-none d-md-block btn btn-light position-relative {{ session('generalDataFilled') ? 'disabled-link' : '' }}">Comenzar</a>
         </div>
         <div class="d-md-none container d-flex flex-column align-items-center">
-            <a href="{{ route('student.create') }}" class="btn btn-light position-relative">Comenzar</a>
+            <a href="{{ route('student.create') }}"
+                class="btn btn-light position-relative {{ session('generalDataFilled') ? 'disabled-link' : '' }}">Comenzar</a>
         </div>
     </div>
 @endsection
