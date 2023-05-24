@@ -22,3 +22,4 @@ Route::get('student/register', [StudentController::class, 'create'])->name('stud
 Route::get('belonging/questions', [BelongingController::class, 'index'])->name('belonging.index');
 
 Route::post('student/save', [StudentController::class, 'store'])->name('student.store');
+Route::post('belonging/save', [BelongingController::class, 'store'])->name('belonging.store');

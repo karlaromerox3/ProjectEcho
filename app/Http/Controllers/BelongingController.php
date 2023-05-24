@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Answer;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -33,7 +34,16 @@ class BelongingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $studentId = $request->input('studentId');
+        $respuestas = $request->input('respuestas');
+        foreach ($respuestas as $question_id => $score) {
+            $respuesta = new Answer();
+            $respuesta->question_id = $question_id;
+            $respuesta->score = $score;
+            $respuesta->save();
+
+            $respuesta->students()->attach($studentId);
+        }
     }
 
     /**

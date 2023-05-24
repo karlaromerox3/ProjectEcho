@@ -9,6 +9,9 @@ class Answer extends Model
 {
     use HasFactory;
 
+        protected $table = 'answers';
+
+
     public function students(){
         return $this->belongsToMany(Student::class);
     }
