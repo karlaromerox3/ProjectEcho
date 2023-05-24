@@ -47,4 +47,8 @@ class Question extends Model
         'question',
         'options_type'
     ];
+
+    public function QuestionAnswers (){
+        return $this->hasMany(Answer::class);
+    }
 }

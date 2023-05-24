@@ -23,4 +23,8 @@ class Student extends Model
         'gender',
         'graduation'
     ];
+
+    public function answers(){
+        return $this->belongsToMany(Answer::class);
+    }
 }

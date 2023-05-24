@@ -16,20 +16,17 @@
             </div>
         @endif
         @foreach ($membershipQuestions as $q)
-            <p>{{ $q->question }}</p>
-            <x-question-component :answerType="$q->options_type" />
+            <x-question-component :answerType="$q->options_type" :questionItem="$q" />
         @endforeach
         <hr class="border border-light border-1 opacity-50">
-
+        <h5 class="form-label">Durante la carrera y en la mayoría de mis clases...</h5>
         @foreach ($acceptanceQuestions as $q)
-            <p>{{ $q->question }}</p>
-            <x-question-component :answerType="$q->options_type" />
+            <x-question-component :answerType="$q->options_type" :questionItem="$q" />
         @endforeach
         <hr class="border border-light border-1 opacity-50">
 
         @foreach ($trustQuestions as $q)
-            <p>{{ $q->question }}</p>
-            <x-question-component :answerType="$q->options_type" />
+            <x-question-component :answerType="$q->options_type" :questionItem="$q" />
         @endforeach
 
     </div>

@@ -9,13 +9,14 @@ use Illuminate\View\Component;
 
 class QuestionComponent extends Component
 {
-    private $answerType;
+    private $answerType, $questionItem;
     /**
      * Create a new component instance.
      */
-    public function __construct($answerType)
+    public function __construct($answerType, $questionItem)
     {
         $this->answerType = $answerType;
+        $this->questionItem = $questionItem;
     }
 
     /**
@@ -25,6 +26,7 @@ class QuestionComponent extends Component
     {
         $params = [
             'answerType' => $this->answerType,
+            'questionItem' => $this->questionItem,
             'agreement7Answers' => Question::AGREEMENT7,
             'seguridad5Answers' => Question::SEGURIDAD5,
             'frecuencia5Answers' => Question::FRECUENCIA5,
