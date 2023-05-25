@@ -16,7 +16,7 @@
         @endif
         @if ($answerType == 'seguridad5')
             @for ($i = 0; $i < count($seguridad5Answers); $i++)
-                <div class=" form-check d-flex flex-lg-column mt-lg-0 mt-1">
+                <div class=" form-check d-flex flex-lg-column mt-lg-0 mt-1 w-50">
                     <input name="respuestas[{{ $questionItem->id }}]" class="justify-center me-lg-0 me-4 d-flex"
                         type="radio" id="respuesta{{ $questionItem->id }}_{{ $i }}"
                         value="{{ $i + 1 }}">
@@ -29,7 +29,7 @@
         @endif
         @if ($answerType == 'frecuencia5')
             @for ($i = 0; $i < count($frecuencia5Answers); $i++)
-                <div class="form-check d-flex flex-lg-column mt-lg-0 mt-1">
+                <div class="form-check d-flex flex-lg-column mt-lg-0 mt-1 w-50">
                     <input name="respuestas[{{ $questionItem->id }}]" class="justify-center me-lg-0 me-4 d-flex"
                         type="radio" id="respuesta{{ $questionItem->id }}_{{ $i }}"
                         value="{{ $i + 1 }}">
