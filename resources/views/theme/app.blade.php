@@ -47,10 +47,38 @@
             align-items: center;
         }
 
+        .ty-hero {
+            position: relative;
+            height: calc(100vh - 56px);
+            width: 100%;
+            display: flex;
+            justify-content: top;
+            align-items: center;
+        }
+
+        .ty-text {
+            margin-top: 100px;
+        }
+
         .hero::before {
             content: "";
             filter: blur(2px);
             background-image: url('https://i.ibb.co/vHMbs9Y/workspace-1280538-1280.jpg');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 1;
+            border: none;
+            outline: none;
+        }
+
+        .ty-hero::before {
+            content: "";
+            filter: blur(2px);
+            background-image: url('https://i.ibb.co/fGbLnFM/people-2562626-1280.jpg');
             background-size: cover;
             position: absolute;
             top: 0px;

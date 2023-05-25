@@ -3,6 +3,7 @@
 use App\Http\Controllers\BelongingController;
 use App\Http\Controllers\EfficacyController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ThanksController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,7 @@ Route::post('belonging/save', [BelongingController::class, 'store'])->name('belo
 // TODO: Change Controllers for SE
 Route::get('efficacy/questions', [EfficacyController::class, 'index'])->name('efficacy.index');
 Route::post('efficacy/save', [EfficacyController::class, 'store'])->name('efficacy.store');
+// Route::get('thanks/index', [ThanksController::class, 'store'])->name('thanks.index');
+Route::get('/thanks', function () {
+    return view('thanks.index');
+})->name('thanks');
