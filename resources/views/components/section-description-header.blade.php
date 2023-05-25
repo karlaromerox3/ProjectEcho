@@ -12,6 +12,9 @@
                     <span>TODAS tus respuestas son anónimas</span>
                 </li>
             </ul>
+            <div class="alert alert-info w-100 text-center" role="alert">
+                No olvides contestar TODAS LAS PREGUNTAS
+            </div>
             <hr>
 
         </div>

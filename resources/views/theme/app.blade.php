@@ -77,7 +77,7 @@
 </head>
 
 <body class="bg-dark text-light">
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="{{ route('homepage') }}">Proyecto Throwback</a>
             <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse"
@@ -94,11 +94,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ session('belongingFilled') ? 'disabled-link' : '' }}"
+                        <a class="nav-link {{ session('belongingFilled') || !session('generalDataFilled') ? 'disabled-link' : '' }}"
                             href="{{ route('belonging.index') }}">Pertenencia</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ session('efficacyFilled') ? 'disabled-link' : '' }}"
+                        <a class="nav-link {{ session('efficacyFilled') || !session('generalDataFilled') || !session('belongingFilled') ? 'disabled-link' : '' }}"
                             href="{{ route('efficacy.index') }}">Auto-eficacia</a>
                     </li>
 

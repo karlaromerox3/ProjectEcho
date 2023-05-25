@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BelongingController;
+use App\Http\Controllers\EfficacyController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,5 +27,5 @@ Route::get('belonging/questions', [BelongingController::class, 'index'])->name('
 Route::post('belonging/save', [BelongingController::class, 'store'])->name('belonging.store');
 
 // TODO: Change Controllers for SE
-Route::get('efficacy/questions', [BelongingController::class, 'index'])->name('efficacy.index');
-Route::post('efficacy/save', [BelongingController::class, 'store'])->name('efficacy.store');
+Route::get('efficacy/questions', [EfficacyController::class, 'index'])->name('efficacy.index');
+Route::post('efficacy/save', [EfficacyController::class, 'store'])->name('efficacy.store');

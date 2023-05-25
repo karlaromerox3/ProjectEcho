@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('questionaire', 40)->comment('SB: sense of belonging, SE: Self Efficacy');
             $table->string('factor', 100);
-            $table->string('question', 200);
+            $table->string('question', 1000);
             $table->string('options_type')->comment('agreement7, seguridad5, frecuencia5');
             $table->softDeletes();
             $table->timestamps();

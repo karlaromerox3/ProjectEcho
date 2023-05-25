@@ -8,17 +8,26 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
-class BelongingController extends Controller
+class EfficacyController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-            $membershipQuestions = DB::table('questions')->where('questionaire', 'SB')->where('factor', 'membership')->get();
-            $acceptanceQuestions = DB::table('questions')->where('questionaire', 'SB')->where('factor', 'acceptance+')->orWhere('factor', 'acceptance-')->get();
-            $trustQuestions = DB::table('questions')->where('questionaire', 'SB')->where('factor', 'trust')->get();
-            return view('belonging.index', compact('membershipQuestions', 'acceptanceQuestions', 'trustQuestions'));
+            $applyCurrentKnowledgeQuestions = DB::table('questions')->where('questionaire', 'SE')->where('factor', 'applyCurrentKnowledge')->get();
+            $effectiveCommunicationQuestions = DB::table('questions')->where('questionaire', 'SE')->where('factor', 'effectiveCommunication')->get();
+            $teamColabQuestions = DB::table('questions')->where('questionaire', 'SE')->where('factor', 'teamColab')->get();
+            $adquireKnowledgeQuestions = DB::table('questions')->where('questionaire', 'SE')->where('factor', 'adquireKnowledge')->get();
+            $previousKnowledgeQuestions = DB::table('questions')->where('questionaire', 'SE')->where('factor', 'previousKnowledge')->get();
+            return view('efficacy.index',
+            compact(
+                'applyCurrentKnowledgeQuestions',
+                'effectiveCommunicationQuestions',
+                'teamColabQuestions',
+                'adquireKnowledgeQuestions',
+                'previousKnowledgeQuestions'
+            ));
 
     }
 
@@ -42,9 +51,10 @@ class BelongingController extends Controller
             $respuesta->question_id = $question_id;
             $respuesta->score = $score;
             $respuesta->save();
-            Session::put('belongingFilled', true);
+            Session::put('efficacyFilled', true);
 
             $respuesta->students()->attach($studentId);
+            // TODO: CHANGE FOR FINAL SCREEN
             return redirect()->route('efficacy.index')->with('studentId', $studentId);;
 
         }
