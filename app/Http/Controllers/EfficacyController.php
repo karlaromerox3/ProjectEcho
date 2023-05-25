@@ -52,10 +52,10 @@ class EfficacyController extends Controller
             $respuesta->score = $score;
             $respuesta->save();
 
+            $respuesta->students()->attach($studentId);
         }
         Session::put('efficacyFilled', true);
 
-        $respuesta->students()->attach($studentId);
         // TODO: CHANGE FOR FINAL SCREEN
         return redirect('thanks');
     }
