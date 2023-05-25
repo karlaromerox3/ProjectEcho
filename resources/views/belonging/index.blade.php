@@ -4,7 +4,8 @@
 
 @section('content')
     <div class="container">
-        <x-section-description-header sectionName="2. Sentido de Pertenencia" sectionDescription="" />
+        <x-section-description-header sectionName="2. Sentido de Pertenencia"
+            sectionDescription="Al evaluar el sentido de pertenencia, podemos comprender cómo los estudiantes se perciben a sí mismos en el contexto de su carrera, cómo se conectan con otros y cómo esto influye en su toma de decisiones y trayectoria profesional. Esta evaluación nos proporciona información valiosa para fortalecer los factores sociales y emocionales que promueven el desarrollo positivo de los estudiantes en su carrera, fomentando su compromiso, motivación y bienestar general." />
         <form action="{{ route('belonging.store') }}" method="POST">
             @csrf
             @if ($errors->any())

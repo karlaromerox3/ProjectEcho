@@ -4,7 +4,8 @@
 
 @section('content')
     <div class="container">
-        <x-section-description-header sectionName="2. Auto Eficacia" sectionDescription="" />
+        <x-section-description-header sectionName="2. Auto Eficacia"
+            sectionDescription="La auto eficacia ermite predecir el rendimiento académico, orientar la toma de decisiones profesionales, fortalecer la resiliencia y persistencia, y promover la autoconfianza y satisfacción laboral de los estudiantes. Al comprender las percepciones de los estudiantes sobre sus habilidades y competencias, la evaluación de la autoeficacia ofrece información valiosa para apoyar su desarrollo y éxito en la carrera." />
         <form action="{{ route('efficacy.store') }}" method="POST">
             @csrf
             @if ($errors->any())
@@ -19,11 +20,6 @@
             @if (session()->has('studentId'))
                 <input type="hidden" name="studentId" value="{{ session('studentId') }}">
             @endif
-            {{-- 'applyCurrentKnowledgeQuestions',
-                'effectiveCommunicationQuestions',
-                'teamColabQuestions',
-                'adquireKnowledgeQuestions',
-                'previousKnowledgeQuestions' --}}
             @foreach ($previousKnowledgeQuestions as $q)
                 <x-question-component :answerType="$q->options_type" :questionItem="$q" />
             @endforeach

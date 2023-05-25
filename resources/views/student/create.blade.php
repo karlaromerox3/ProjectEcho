@@ -6,7 +6,7 @@
     <div class="container">
 
         <x-section-description-header sectionName="1. Datos Generales"
-            sectionDescription="Tus datos demográficos nos ayudan al propósito de la investigación. Tus respuestas son anónimas y solo serán usadas para el análisis del estudio." />
+            sectionDescription="Tus datos demográficos nos ayudan a segmentar a nuestra población, lo cual es un parámetro clave en el estudio. Tus respuestas son anónimas y solo serán usadas para el análisis del estudio." />
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>

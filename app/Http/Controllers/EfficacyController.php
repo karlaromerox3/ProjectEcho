@@ -55,7 +55,7 @@ class EfficacyController extends Controller
 
             $respuesta->students()->attach($studentId);
             // TODO: CHANGE FOR FINAL SCREEN
-            return redirect()->route('thanks.index')->with('studentId', $studentId);;
+            return redirect('thanks');
 
         }
     }

@@ -13,8 +13,8 @@
                 reflexionar
                 sobre tu experiencia en la carrera.
             </p>
-            <p class="fs-5 text-light mt-4 lh-1 text-center">Scrollea abajo si quieres conocer algunos resultados
+            {{-- <p class="fs-5 text-light mt-4 lh-1 text-center">Scrollea abajo si quieres conocer algunos resultados
                 preliminares de
-                esta investigación.</p>
+                esta investigación.</p> --}}
         </div>
     @endsection
