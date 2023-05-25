@@ -42,12 +42,11 @@ class BelongingController extends Controller
             $respuesta->question_id = $question_id;
             $respuesta->score = $score;
             $respuesta->save();
-            Session::put('belongingFilled', true);
-
-            $respuesta->students()->attach($studentId);
-            return redirect()->route('efficacy.index')->with('studentId', $studentId);;
-
         }
+        Session::put('belongingFilled', true);
+
+        $respuesta->students()->attach($studentId);
+        return redirect()->route('efficacy.index')->with('studentId', $studentId);;
     }
 
     /**
