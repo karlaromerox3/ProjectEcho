@@ -600,7 +600,6 @@ class ThanksController extends Controller
 
         foreach ($male_students as $student) {
             if ($student->total_score > $maxScore) {
-                echo $student->total_score;
                 $maxScore = $student->total_score;
             }
         }
