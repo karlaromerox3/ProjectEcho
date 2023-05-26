@@ -24,33 +24,60 @@
             <h2 class="text-center">TEC 20</h2>
         </div>
         <div class="dynamic_row_col normal_dynamic_row_col">
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
-                </div>
-            </div>
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Sentido de Pertenencia</h4>
+                    <h5 class="card-title">Puntaje promedio </h5>
+                    <div class="mt-4 row">
+
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleBelongingAvg() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleBelongingAvg() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Máximo: 105</span>
+
                 </div>
             </div>
             <div class="card m-2 col">
                 <div class="card-body text-center items-center">
-                    <h4 class="card-title text-center mb-1">Auto-eficacia</h4>
-                    <h5 class="card-title">Puntaje más alto</h5>
+                    <h4 class="card-title text-center mb-1">Sentido de Pertenencia</h4>
+                    <h5 class="card-title">Puntaje máximo </h5>
                     <div class="mt-4 row">
 
                         <div class="col w-50">
-                            <h2 class="card-text men">23%</h2>
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleBelongingMax() }}</h2>
                             <span class="card-text">Hombres</span>
                         </div>
                         <div class="col w-50">
-                            <h2 class="card-text women">23%</h2>
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleBelongingMax() }}</h2>
                             <span class="card-text">Mujeres</span>
                         </div>
                     </div>
+                    <span class="card-text mt-2">Máximo: 105</span>
+
+                </div>
+            </div>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Sentido de Pertenencia</h4>
+                    <h5 class="card-title">Puntaje mínimo </h5>
+                    <div class="mt-4 row">
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleBelongingMin() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleBelongingMin() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Mínimo: 15</span>
+
                 </div>
             </div>
 
@@ -59,24 +86,59 @@
             <div class="card m-2 col">
                 <div class="card-body text-center items-center">
                     <h4 class="card-title text-center mb-1">Auto eficacia</h4>
-                    <h2 class="card-text">23%</h2>
+                    <h5 class="card-title">Puntaje promedio </h5>
+                    <div class="mt-4 row">
 
-                    <h5 class="card-title">Puntaje más alto global (H)</h5>
-                </div>
-            </div>
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
-                </div>
-            </div>
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
-                </div>
-            </div>
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleEfficacyAvg() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleEfficacyAvg() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Máximo: 50</span>
 
+                </div>
+            </div>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Auto eficacia</h4>
+                    <h5 class="card-title">Puntaje máximo </h5>
+                    <div class="mt-4 row">
+
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleEfficacyMax() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleEfficacyMax() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Máximo: 50</span>
+
+                </div>
+            </div>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Auto eficacia</h4>
+                    <h5 class="card-title">Puntaje mínimo </h5>
+                    <div class="mt-4 row">
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleEfficacyMin() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleEfficacyMin() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Mínimo: 10</span>
+
+                </div>
+            </div>
         </div>
         <div class="dynamic_row_col normal_dynamic_row_col">
             <div class="card m-2 col">
@@ -109,33 +171,60 @@
             <h2 class="text-center">TEC 21</h2>
         </div>
         <div class="dynamic_row_col normal_dynamic_row_col">
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
-                </div>
-            </div>
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Sentido de Pertenencia</h4>
+                    <h5 class="card-title">Puntaje promedio </h5>
+                    <div class="mt-4 row">
+
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleBelongingAvg21() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleBelongingAvg21() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Máximo: 105</span>
+
                 </div>
             </div>
             <div class="card m-2 col">
                 <div class="card-body text-center items-center">
-                    <h4 class="card-title text-center mb-1">Auto-eficacia</h4>
-                    <h5 class="card-title">Puntaje más alto</h5>
+                    <h4 class="card-title text-center mb-1">Sentido de Pertenencia</h4>
+                    <h5 class="card-title">Puntaje máximo </h5>
                     <div class="mt-4 row">
 
                         <div class="col w-50">
-                            <h2 class="card-text men">23%</h2>
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleBelongingMax21() }}</h2>
                             <span class="card-text">Hombres</span>
                         </div>
                         <div class="col w-50">
-                            <h2 class="card-text women">23%</h2>
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleBelongingMax21() }}</h2>
                             <span class="card-text">Mujeres</span>
                         </div>
                     </div>
+                    <span class="card-text mt-2">Máximo: 105</span>
+
+                </div>
+            </div>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Sentido de Pertenencia</h4>
+                    <h5 class="card-title">Puntaje mínimo </h5>
+                    <div class="mt-4 row">
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleBelongingMin21() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleBelongingMin21() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Mínimo: 15</span>
+
                 </div>
             </div>
 
@@ -144,21 +233,57 @@
             <div class="card m-2 col">
                 <div class="card-body text-center items-center">
                     <h4 class="card-title text-center mb-1">Auto eficacia</h4>
-                    <h2 class="card-text">23%</h2>
+                    <h5 class="card-title">Puntaje promedio </h5>
+                    <div class="mt-4 row">
 
-                    <h5 class="card-title">Puntaje más alto global (H)</h5>
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleEfficacyAvg21() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleEfficacyAvg21() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Máximo: 50</span>
+
                 </div>
             </div>
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Auto eficacia</h4>
+                    <h5 class="card-title">Puntaje máximo </h5>
+                    <div class="mt-4 row">
+
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleEfficacyMax21() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleEfficacyMax21() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Máximo: 50</span>
+
                 </div>
             </div>
-            <div class="card m-2 col" >
-                <div class="card-body">
-                    <h3 class="card-text">23%</h3>
-                    <h5 class="card-title">Puntaje más alto global (M)</h5>
+            <div class="card m-2 col">
+                <div class="card-body text-center items-center">
+                    <h4 class="card-title text-center mb-1">Auto eficacia</h4>
+                    <h5 class="card-title">Puntaje mínimo </h5>
+                    <div class="mt-4 row">
+                        <div class="col w-50">
+                            <h2 class="card-text men">{{ app('App\Http\Controllers\ThanksController')->maleEfficacyMin21() }}</h2>
+                            <span class="card-text">Hombres</span>
+                        </div>
+                        <div class="col w-50">
+                            <h2 class="card-text women">{{ app('App\Http\Controllers\ThanksController')->femaleEfficacyMin21() }}</h2>
+                            <span class="card-text">Mujeres</span>
+                        </div>
+                    </div>
+                    <span class="card-text mt-2">Mínimo: 10</span>
+
                 </div>
             </div>
 
