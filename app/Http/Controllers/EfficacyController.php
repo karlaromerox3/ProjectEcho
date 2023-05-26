@@ -56,7 +56,6 @@ class EfficacyController extends Controller
         }
         Session::put('efficacyFilled', true);
 
-        // TODO: CHANGE FOR FINAL SCREEN
         return redirect('thanks');
     }
 

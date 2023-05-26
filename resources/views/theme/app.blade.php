@@ -20,10 +20,24 @@
             /* Cambia el cursor para indicar que no es interactivo */
         }
 
+        .normal_dynamic_row_col{
+            display: flex;
+            flex-direction: row;
+        }
+
         @media (min-width: 992px) {
             .max-width-answer {
                 max-width: 220px !important;
             }
+
+
+        }
+        @media (max-width: 992px) {
+            .dynamic_row_col{
+                display: flex;
+                flex-direction: column;
+            }
+
 
         }
 
@@ -100,6 +114,13 @@
         p {
             position: relative;
             color: #ffffff;
+        }
+
+        .women{
+            color: #e56399;
+        }
+        .men{
+            color: #6698ff;
         }
     </style>
 </head>
